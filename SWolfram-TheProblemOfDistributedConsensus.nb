@@ -10,101 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     79561,       1546]
-NotebookOptionsPosition[     63487,       1170]
-NotebookOutlinePosition[     78792,       1531]
-CellTagsIndexPosition[     78749,       1528]
+NotebookDataLength[     75681,       1454]
+NotebookOptionsPosition[     59968,       1085]
+NotebookOutlinePosition[     75273,       1446]
+CellTagsIndexPosition[     75230,       1443]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
- RowBox[{
-  RowBox[{"caEvaluateCompiled", "=", 
-   RowBox[{"FunctionCompile", "[", 
-    RowBox[{"Function", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"Typed", "[", 
-         RowBox[{"rule", ",", 
-          RowBox[{
-           RowBox[{"TypeSpecifier", "[", "\"\<PackedArray\>\"", "]"}], "[", 
-           RowBox[{"\"\<MachineInteger\>\"", ",", "1"}], "]"}]}], "]"}], ",", 
-        RowBox[{"Typed", "[", 
-         RowBox[{"rad", ",", "\"\<MachineInteger\>\""}], "]"}], ",", 
-        RowBox[{"Typed", "[", 
-         RowBox[{"init", ",", 
-          RowBox[{
-           RowBox[{"TypeSpecifier", "[", "\"\<PackedArray\>\"", "]"}], "[", 
-           RowBox[{"\"\<MachineInteger\>\"", ",", "1"}], "]"}]}], "]"}], ",", 
-        RowBox[{"Typed", "[", 
-         RowBox[{"eventCount", ",", "\"\<Integer64\>\""}], "]"}]}], "}"}], 
-      ",", 
-      RowBox[{"Module", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-         "state", ",", "position", ",", "substate", ",", "rulePart", ",", 
-          "newCellValue"}], "}"}], ",", "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"state", "=", "init"}], ";", "\[IndentingNewLine]", 
-         RowBox[{"Do", "[", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"position", "=", 
-             RowBox[{"RandomInteger", "[", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", 
-                RowBox[{"Length", "[", "state", "]"}]}], "}"}], "]"}]}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"substate", "=", 
-             RowBox[{"state", "[", 
-              RowBox[{"[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Mod", "[", 
-                  RowBox[{"#", ",", 
-                   RowBox[{"Length", "[", "state", "]"}], ",", "1"}], "]"}], 
-                 " ", "&"}], " ", "/@", " ", 
-                RowBox[{"Range", "[", 
-                 RowBox[{
-                  RowBox[{"position", "-", "rad"}], ",", 
-                  RowBox[{"position", "+", "rad"}]}], "]"}]}], "]"}], "]"}]}],
-             ";", "\[IndentingNewLine]", 
-            RowBox[{"rulePart", "=", 
-             RowBox[{
-              RowBox[{"Fold", "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"2", "#1"}], "+", "#2"}], "&"}], ",", "0", ",", 
-                "substate"}], "]"}], "+", "1"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"newCellValue", "=", 
-             RowBox[{"rule", "[", 
-              RowBox[{"[", "rulePart", "]"}], "]"}]}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"state", "[", 
-              RowBox[{"[", "position", "]"}], "]"}], "=", "newCellValue"}], 
-            ";"}], "\[IndentingNewLine]", ",", "eventCount"}], "]"}], ";", 
-         "\[IndentingNewLine]", "state"}]}], "\[IndentingNewLine]", "]"}]}], 
-     "]"}], "]"}]}], ";"}]], "Input",
- Evaluatable->False,
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellChangeTimes->{{3.8296968602226763`*^9, 3.829696882854486*^9}, 
-   3.829697934478654*^9},
- CellID->987198503,ExpressionUUID->"3c4d9f3e-22d2-413a-8e63-b3eec9e6ffe7"],
-
-Cell["Should be compiled for all machine targets:", "Text",
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellChangeTimes->{{3.829697819346984*^9, 3.829697826218842*^9}, 
-   3.8296979344787617`*^9},
- CellID->386583199,ExpressionUUID->"6fc69350-14a2-4590-81ed-24815a56c9a6"],
-
 Cell[BoxData[
  RowBox[{
   RowBox[{"caEvaluateCompiled", "=", 
@@ -1531,20 +1446,13 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 3230, 77, 431, "Input",ExpressionUUID->"3c4d9f3e-22d2-413a-8e63-b3eec9e6ffe7",
- Evaluatable->False,
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellID->987198503],
-Cell[3813, 101, 283, 4, 43, "Text",ExpressionUUID->"6fc69350-14a2-4590-81ed-24815a56c9a6",
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellID->386583199],
-Cell[4099, 107, 53184, 905, 88, "Input",ExpressionUUID->"0c58a181-cdd9-41ea-bc59-57c9bb8c79a5",
+Cell[580, 22, 53184, 905, 88, "Input",ExpressionUUID->"0c58a181-cdd9-41ea-bc59-57c9bb8c79a5",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellID->1165793418],
-Cell[57286, 1014, 990, 25, 54, "Input",ExpressionUUID->"09cf906f-47c8-4388-9fee-f9960814f4b6",
+Cell[53767, 929, 990, 25, 54, "Input",ExpressionUUID->"09cf906f-47c8-4388-9fee-f9960814f4b6",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellID->1996664745],
-Cell[58279, 1041, 5192, 126, 101, "Input",ExpressionUUID->"3fe392e9-540f-4050-9f18-784dba962073",
+Cell[54760, 956, 5192, 126, 101, "Input",ExpressionUUID->"3fe392e9-540f-4050-9f18-784dba962073",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellID->1162181614]
 }, Open  ]]
