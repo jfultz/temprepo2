@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     75681,       1454]
-NotebookOptionsPosition[     59968,       1085]
-NotebookOutlinePosition[     75273,       1446]
-CellTagsIndexPosition[     75230,       1443]
+NotebookDataLength[     69081,       1288]
+NotebookOptionsPosition[     53746,        927]
+NotebookOutlinePosition[     69051,       1288]
+CellTagsIndexPosition[     69008,       1285]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"caEvaluateCompiled", "=", 
@@ -925,163 +923,7 @@ TypeFramework`TypeLiteral[1, \"Integer64\"]], \"Integer64\"} -> \"PackedArray\
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
  CellChangeTimes->{{3.829696892086376*^9, 3.8296969056462393`*^9}, 
    3.829697934483061*^9, {3.829774275099237*^9, 3.829774287329431*^9}},
- CellID->1165793418,ExpressionUUID->"0c58a181-cdd9-41ea-bc59-57c9bb8c79a5"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"RandomAsynchronousCellularAutomaton", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"rn_", ",", "2", ",", "r_"}], "}"}], ",", "init_", ",", 
-    RowBox[{"{", 
-     RowBox[{"t_", ",", "ct_"}], "}"}]}], "]"}], ":=", 
-  RowBox[{"NestList", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"caEvaluateCompiled", "[", 
-      RowBox[{
-       RowBox[{"Reverse", "[", 
-        RowBox[{"IntegerDigits", "[", 
-         RowBox[{"rn", ",", "2", ",", 
-          RowBox[{"2", "^", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"2", "r"}], "+", "1"}], ")"}]}]}], "]"}], "]"}], ",", 
-       "r", ",", "#", ",", "ct"}], "]"}], "&"}], ",", "init", ",", "t"}], 
-   "]"}]}]], "Input",
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellChangeTimes->{{3.829696965873382*^9, 3.829696987544943*^9}, {
-   3.8296976481262407`*^9, 3.829697682413405*^9}, 3.829697934485886*^9},
- CellID->1996664745,ExpressionUUID->"09cf906f-47c8-4388-9fee-f9960814f4b6"],
-
-Cell[BoxData[
- RowBox[{"BlockRandom", "[", 
-  RowBox[{
-   RowBox[{"SeedRandom", "[", "567", "]"}], ";", 
-   RowBox[{"ArrayPlot", "[", 
-    RowBox[{
-     RowBox[{"RandomAsynchronousCellularAutomaton", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"232", ",", "2", ",", "1"}], "}"}], ",", 
-       RowBox[{"RandomChoice", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{".7", ",", ".3"}], "}"}], "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{"1", ",", "0"}], "}"}]}], ",", "400"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"100", ",", "20"}], "}"}]}], "]"}], ",", 
-     RowBox[{"ColorRules", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"0", "\[Rule]", 
-         InterpretationBox[
-          ButtonBox[
-           TooltipBox[
-            GraphicsBox[{
-              {GrayLevel[0], RectangleBox[{0, 0}]}, 
-              {GrayLevel[0], RectangleBox[{1, -1}]}, 
-              {Hue[0.15, 0.72, 1], RectangleBox[{0, -1}, {2, 1}]}},
-             AspectRatio->1,
-             DefaultBaseStyle->"ColorSwatchGraphics",
-             Frame->True,
-             FrameStyle->Hue[0.15, 0.72, 0.6666666666666667],
-             FrameTicks->None,
-             
-             ImageSize->
-              Dynamic[{
-               Automatic, 
-                1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                 Magnification])}],
-             PlotRangePadding->None],
-            StyleBox[
-             RowBox[{"Hue", "[", 
-               RowBox[{"0.15`", ",", "0.72`", ",", "1"}], "]"}], NumberMarks -> 
-             False]],
-           Appearance->None,
-           BaseStyle->{},
-           BaselinePosition->Baseline,
-           ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
-             If[
-              Not[
-               AbsoluteCurrentValue["Deployed"]], 
-              SelectionMove[Typeset`box$, All, Expression]; 
-              FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
-              FrontEnd`Private`$ColorSelectorInitialColor = 
-               Hue[0.15, 0.72, 1]; 
-              FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
-              MathLink`CallFrontEnd[
-                FrontEnd`AttachCell[Typeset`box$, 
-                 FrontEndResource["HueColorValueSelector"], {
-                 0, {Left, Bottom}}, {Left, Top}, 
-                 "ClosingActions" -> {
-                  "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
-           DefaultBaseStyle->{},
-           Evaluator->Automatic,
-           Method->"Preemptive"],
-          Hue[0.15, 0.72, 1],
-          Editable->False,
-          Selectable->False]}], ",", 
-        RowBox[{"1", "\[Rule]", 
-         InterpretationBox[
-          ButtonBox[
-           TooltipBox[
-            GraphicsBox[{
-              {GrayLevel[0], RectangleBox[{0, 0}]}, 
-              {GrayLevel[0], RectangleBox[{1, -1}]}, 
-              {Hue[0.98, 1, 0.8200000000000001], 
-               RectangleBox[{0, -1}, {2, 1}]}},
-             AspectRatio->1,
-             DefaultBaseStyle->"ColorSwatchGraphics",
-             Frame->True,
-             FrameStyle->Hue[0.98, 1., 0.5466666666666667],
-             FrameTicks->None,
-             
-             ImageSize->
-              Dynamic[{
-               Automatic, 
-                1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                 Magnification])}],
-             PlotRangePadding->None],
-            StyleBox[
-             RowBox[{"Hue", "[", 
-               RowBox[{"0.98`", ",", "1", ",", "0.8200000000000001`"}], "]"}],
-              NumberMarks -> False]],
-           Appearance->None,
-           BaseStyle->{},
-           BaselinePosition->Baseline,
-           ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
-             If[
-              Not[
-               AbsoluteCurrentValue["Deployed"]], 
-              SelectionMove[Typeset`box$, All, Expression]; 
-              FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
-              FrontEnd`Private`$ColorSelectorInitialColor = 
-               Hue[0.98, 1, 0.8200000000000001]; 
-              FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
-              MathLink`CallFrontEnd[
-                FrontEnd`AttachCell[Typeset`box$, 
-                 FrontEndResource["HueColorValueSelector"], {
-                 0, {Left, Bottom}}, {Left, Top}, 
-                 "ClosingActions" -> {
-                  "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
-           DefaultBaseStyle->{},
-           Evaluator->Automatic,
-           Method->"Preemptive"],
-          Hue[0.98, 1, 0.8200000000000001],
-          Editable->False,
-          Selectable->False]}]}], "}"}]}], ",", 
-     RowBox[{"MeshStyle", "\[Rule]", "Orange"}], ",", 
-     RowBox[{"Frame", "\[Rule]", "None"}]}], "]"}]}], "]"}]], "Input",
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellChangeTimes->{{3.8296975824743*^9, 3.829697607614152*^9}, {
-   3.829697724397533*^9, 3.829697806736013*^9}, {3.8296978806686697`*^9, 
-   3.829697885841517*^9}, {3.8296979174155903`*^9, 3.829697918127204*^9}, 
-   3.829820274805159*^9},
- CellID->1162181614,ExpressionUUID->"3fe392e9-540f-4050-9f18-784dba962073"]
-}, Open  ]]
+ CellID->1165793418,ExpressionUUID->"0c58a181-cdd9-41ea-bc59-57c9bb8c79a5"]
 },
 WindowSize->{1214., 790.5},
 WindowMargins->{{Automatic, -5.5}, {-5.5, Automatic}},
@@ -1445,17 +1287,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 53184, 905, 88, "Input",ExpressionUUID->"0c58a181-cdd9-41ea-bc59-57c9bb8c79a5",
+Cell[558, 20, 53184, 905, 88, "Input",ExpressionUUID->"0c58a181-cdd9-41ea-bc59-57c9bb8c79a5",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellID->1165793418],
-Cell[53767, 929, 990, 25, 54, "Input",ExpressionUUID->"09cf906f-47c8-4388-9fee-f9960814f4b6",
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellID->1996664745],
-Cell[54760, 956, 5192, 126, 101, "Input",ExpressionUUID->"3fe392e9-540f-4050-9f18-784dba962073",
- CellGroupingRules->{"GroupTogetherGrouping", 10000.},
- CellID->1162181614]
-}, Open  ]]
+ CellID->1165793418]
 }
 ]
 *)
